@@ -1,0 +1,47 @@
+/*Written by Mohit Bhasi
+
+Twinkling star webpage background.
+ 
+Twinkle , twinkle little star.
+*/
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+/* Firefox */
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite; /* Firefox */
+  -webkit-animation:move-twink-back 200s linear infinite; /* Chrome, Safari, Opera */ 
+  animation:move-twink-back 200s linear infinite;
+}
